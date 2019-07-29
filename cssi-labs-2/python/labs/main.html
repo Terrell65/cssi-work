@@ -1,0 +1,23 @@
+<html>
+ <head>
+   <title> welcome to memegen</title>
+ </head>
+ <body>
+   <h1>meme genrator</h1>
+   <img height='100px' width'150px'
+      src= "https://www.publicdomainpictures.net/pictures/90000/velka/alpaca-chewing.jpg"/>
+   <h2> welcome to the best genrator</h2>
+   <form method='post'action='/result'>
+     {% for url in imgs %}
+      <img src={{url}}>
+      <input type='radio' name='template' value="{{url}}"/>
+     {% endfor %}
+     <input type='text' name='top-line'/>
+     <input type='text' name='my-line'/>
+     <input type='submit'/>
+   </form>
+   <a href="/about"> LINK TO SECOND PAGE</a>
+ </body>
+
+
+</html>
